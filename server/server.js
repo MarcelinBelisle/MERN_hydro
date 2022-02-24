@@ -10,8 +10,8 @@ db.once('open', () => console.log('Connected to Database'))
 
 app.use(express.json())
 
-const infoRouter = require('./routes/info')
-app.use('/info', infoRouter)
+const infoRouter = require('./routes/infos')
+app.use('/infos', infoRouter)
 
 
 
