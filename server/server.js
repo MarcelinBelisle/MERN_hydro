@@ -1,13 +1,10 @@
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').parse()
-}
 
 require('dotenv').config()
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
-app.use(express.static('/public'));
+app.use(express.static(__dirname + '/public'));
 
 mongoose.connect(process.env.DATABASE_URL)
 const db = mongoose.connection
